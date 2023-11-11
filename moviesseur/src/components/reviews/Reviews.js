@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-//import { api } from '../../api/axiosConfig';
+import  api  from '../../api/axiosConfig';
 import { useParams } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import Review from '../review/Review';
@@ -7,6 +7,7 @@ import Review from '../review/Review';
 import React from 'react'
 
 const Reviews = ({getMovieData,movie,reviews,setReviews}) => {
+
     const revText = useRef();
     let params = useParams();
     const movieId = params.movieId;
@@ -64,6 +65,11 @@ const Reviews = ({getMovieData,movie,reviews,setReviews}) => {
                             <>
                                 <Row>
                                     <Col>{r.body}</Col>
+                                </Row>
+                                <Row>
+                                    <Col>
+                                    <hr />
+                                    </Col>
                                 </Row>
                             </>
                         )

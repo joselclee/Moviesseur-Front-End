@@ -1,6 +1,6 @@
-import { Form, Button } from 'react-bootstrap';
+import { Form, Button } from 'react-bootstrap'; 
 
-const Review = () => {
+const Review = ({handleSubmit, revText, labelText, defaultValue}) => {
   return (
     <Form>
         <Form.Group className="mb-3" controlId="exampleForm.ControlTextArea1">
